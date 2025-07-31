@@ -3,7 +3,7 @@
 *.log
 *.pyc
 *.swp
-.DS_Store
+*.DS_Store
 .atom/
 .build/
 .buildlog/
@@ -18,9 +18,7 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
+# VS Code (uncomment if you don’t want to track settings)
 #.vscode/
 
 # Flutter/Dart/Pub related
@@ -31,7 +29,7 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+build/
 
 # Symbolication related
 app.*.symbols
@@ -39,8 +37,35 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android Studio build artifacts
+/android/.gradle/
 /android/app/debug
 /android/app/profile
 /android/app/release
-"*.hprof" 
+/android/local.properties
+
+# Firebase config (DO NOT commit sensitive keys!)
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+
+# iOS build
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Generated.xcconfig
+ios/.symlinks/
+ios/Pods/
+ios/build/
+
+# macOS
+macos/Pods/
+macos/build/
+
+# Windows
+windows/flutter/ephemeral/
+windows/build/
+
+# Temp & profiling
+*.hprof
+*.lock
+*.tmp
