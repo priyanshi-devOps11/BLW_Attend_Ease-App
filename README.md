@@ -56,8 +56,9 @@ lib/
 
 ## 📹 Demo Videos
 
-- 🔗 [Demo Video 1](https://drive.google.com/your-demo1-link)  
-- 🔗 [Demo Video 2](https://drive.google.com/your-demo2-link)  
+-[Demo Video 1](demo/demo_attendease.mp4)
+-[Demo Video 2](demo/Recording%202025-09-22%20221349.mp4)
+ 
 
 *(Click the links to watch the app in action!)*
 
