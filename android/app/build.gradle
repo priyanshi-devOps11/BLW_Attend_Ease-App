@@ -1,0 +1,48 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.blw_attend_ease"
+    compileSdk flutter.compileSdkVersion
+    ndkVersion "29.0.13599879"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+
+        // ✅ Required for flutter_local_notifications and other Java 8+ features
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    defaultConfig {
+        applicationId "com.blw_attend_ease"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // ✅ Using debug signing config for release (replace later with real keystore)
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source "../.."
+}
+
+dependencies {
+    // ✅ Required for Java 8 desugaring
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+}
